@@ -1,5 +1,5 @@
 {
-    "name": "albertotain/UserManager",
+    "name": "albertotain/user-manager",
     "description": "UserManager plugin for CakePHP 4",
     "type": "cakephp-plugin",
     "license": "MIT",

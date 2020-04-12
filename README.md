@@ -25,7 +25,7 @@ composer require albertotain/UserManager
     ],
 
 ### Configura en el `initialize()`: src/Controller/AppController
-
+```bash
  $this->loadComponent('FormProtection');
 
  $this->loadComponent('Auth', [
@@ -58,7 +58,7 @@ composer require albertotain/UserManager
 		'storage' => 'Session',
 		'autoRedirect' => false
 	]);
-
+```
 ### Ejecutar migración para generar tablas en BD. 
 Se crearán las tablas `Users` y `Roles` 
 
@@ -81,14 +81,14 @@ bin/cake migrations migrate -p UserManager
 
 
 ## Rutas habilidadas en la aplicación
-/user-manager/login
-/user-manager/forgot-password
+- /user-manager/login
+- /user-manager/forgot-password
 
 (Necesita estar logueado en la aplicación)
-/user-manager/users
-/user-manager/users/add
-/user-manager/users/edit/:id
-/user-manager/roles
-/user-manager/roles/add
-/user-manager/roles/edit/:id
-/user-manager/roles/delete/:id
+- /user-manager/users
+- /user-manager/users/add
+- /user-manager/users/edit/:id
+- /user-manager/roles
+- /user-manager/roles/add
+- /user-manager/roles/edit/:id
+- /user-manager/roles/delete/:id

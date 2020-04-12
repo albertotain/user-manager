@@ -7,7 +7,7 @@ You can install this plugin into your CakePHP application using [composer](https
 The recommended way to install composer packages is:
 
 ```bash
-composer require albertotain/UserManager
+composer require albertotain/user-manager
 ```
 
 ## Configuration
@@ -78,6 +78,16 @@ bin/cake migrations migrate -p UserManager
     - login.php
     - forgot_password.php
     - reset_password.php
+
+
+### Añade el plugin en:  src/Application.php
+```
+public function bootstrap(): void {
+
+	$this->addPlugin('UserManager');
+
+}
+```
 
 
 ## Rutas habilidadas en la aplicación

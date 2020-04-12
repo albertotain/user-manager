@@ -12,6 +12,16 @@ composer require albertotain/user-manager
 
 ## Configuration
 
+### Añade el plugin en: src/Application.php
+
+```
+public function bootstrap(): void {
+
+	$this->addPlugin('UserManager');
+
+}
+```
+
 ### Configura en: config/app_local.php
 
     'EmailTransport' => [
@@ -85,15 +95,6 @@ bin/cake migrations migrate -p UserManager
     - forgot_password.php
     - reset_password.php
 
-### Añade el plugin en: src/Application.php
-
-```
-public function bootstrap(): void {
-
-	$this->addPlugin('UserManager');
-
-}
-```
 
 ## Rutas habilidadas en la aplicación
 

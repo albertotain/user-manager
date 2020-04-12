@@ -1,0 +1,24 @@
+{
+    "name": "albertotain/UserManager",
+    "description": "UserManager plugin for CakePHP 4",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "require": {
+        "cakephp/cakephp": "^4.0",
+        "lcobucci/jwt": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UserManager\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UserManager\\Test\\": "tests/",
+            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+        }
+    }
+}

@@ -64,10 +64,12 @@ composer require albertotain/user-manager
 
 ### Ejecutar migración para generar tablas en BD.
 
-Se crearán las tablas `Users` y `Roles`
+Se crearán las tablas `Users` y `Roles`. Se crea el rol administrador.
 
 ```bash
 bin/cake migrations migrate -p UserManager
+
+bin/cake migrations seed -p UserManager
 
 ```
 

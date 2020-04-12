@@ -11,6 +11,7 @@ composer require albertotain/user-manager
 ```
 
 ## Configuration
+
 ### Configura en: config/app_local.php
 
     'EmailTransport' => [
@@ -25,6 +26,7 @@ composer require albertotain/user-manager
     ],
 
 ### Configura en el `initialize()`: src/Controller/AppController
+
 ```bash
  $this->loadComponent('FormProtection');
 
@@ -59,28 +61,32 @@ composer require albertotain/user-manager
 		'autoRedirect' => false
 	]);
 ```
-### Ejecutar migración para generar tablas en BD. 
-Se crearán las tablas `Users` y `Roles` 
+
+### Ejecutar migración para generar tablas en BD.
+
+Se crearán las tablas `Users` y `Roles`
 
 ```bash
 bin/cake migrations migrate -p UserManager
 
 ```
 
-
 ### Crea el layout en: src/templates/layout/
+
     -login.php
 
-### Crea la plantilla del email en:  src/templates/layout/email/html/
+### Crea la plantilla del email en: src/templates/layout/email/html/
+
     - forgot_password.php
 
-### Crea las vistas en:  src/templates/Users/
+### Crea las vistas en: src/templates/Users/
+
     - login.php
     - forgot_password.php
     - reset_password.php
 
+### Añade el plugin en: src/Application.php
 
-### Añade el plugin en:  src/Application.php
 ```
 public function bootstrap(): void {
 
@@ -89,12 +95,13 @@ public function bootstrap(): void {
 }
 ```
 
-
 ## Rutas habilidadas en la aplicación
+
 - /user-manager/login
 - /user-manager/forgot-password
 
 (Necesita estar logueado en la aplicación)
+
 - /user-manager/users
 - /user-manager/users/add
 - /user-manager/users/edit/:id

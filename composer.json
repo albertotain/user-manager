@@ -2,7 +2,7 @@
     "name": "albertotain/user-manager",
     "description": "UserManager plugin for CakePHP 4",
     "type": "cakephp-plugin",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "license": "MIT",
     "require": {
         "cakephp/cakephp": "^4.0",

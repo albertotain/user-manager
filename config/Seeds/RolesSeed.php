@@ -31,6 +31,22 @@ class RolesSeed extends AbstractSeed {
 
     $table = $this->table('roles');
     $table->insert($data)->save();
+    
+    $data = [
+        [
+            'role_id' => '1',
+            'email' => 'admin@admin.es',
+            'password' => 'admin',
+            'activo' => 1,
+            'created' => date('Y-m-d H:i:s'),
+            'modified' => date('Y-m-d H:i:s'),
+        ],
+    ];
+
+    $table = $this->table('users');
+    $table->insert($data)->save();
+    
+    
   }
 
 }

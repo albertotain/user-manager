@@ -74,7 +74,9 @@ public function bootstrap(): void {
 
 ### Ejecutar migración para generar tablas en BD.
 
-Se crearán las tablas `Users` y `Roles`. Se crea el rol administrador.
+Se crearán las tablas `Users` y `Roles`. Se crea el rol administrador y un usuario administrador:
+- Email: admin@admin.es
+- Contraseña: admin
 
 ```bash
 bin/cake migrations migrate -p UserManager
@@ -86,6 +88,31 @@ bin/cake migrations seed -p UserManager
 ### Crea el layout en: src/templates/layout/
 
     -login.php
+
+-Y añade a tus plantillas:
+  - <?= $this->fetch('css') ?>
+  - <?= $this->fetch('script'); ?>
+
+````
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+  
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+
+  </head>
+  <body>
+    <?= $this->Flash->render(); ?>
+    <?= $this->fetch('content'); ?>
+    <div id="footer" class="container"></div>
+    
+    <?= $this->fetch('script'); ?>
+  </body>
+</html>
+```
 
 ### Crea la plantilla del email en: src/templates/layout/email/html/
 

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Migrations\AbstractSeed;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * Roles seed.
@@ -24,7 +25,7 @@ class UsersSeed extends AbstractSeed {
         [
             'role_id' => '1',
             'email' => 'admin@admin.es',
-            'password' => 'admin',
+            'password' => (new DefaultPasswordHasher)->hash('admin'),
             'activo' => 1,
             'created' => date('Y-m-d H:i:s'),
             'modified' => date('Y-m-d H:i:s'),

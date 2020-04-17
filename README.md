@@ -93,7 +93,7 @@ bin/cake migrations seed -p UserManager
   - <?= $this->fetch('css') ?>
   - <?= $this->fetch('script'); ?>
 
-````
+```bash
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -112,7 +112,7 @@ bin/cake migrations seed -p UserManager
     <?= $this->fetch('script'); ?>
   </body>
 </html>
-```
+````
 
 ### Crea la plantilla del email en: src/templates/layout/email/html/
 

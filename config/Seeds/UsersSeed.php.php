@@ -7,7 +7,7 @@ use Migrations\AbstractSeed;
 /**
  * Roles seed.
  */
-class RolesSeed extends AbstractSeed {
+class UsersSeed extends AbstractSeed {
 
   /**
    * Run Method.
@@ -20,16 +20,18 @@ class RolesSeed extends AbstractSeed {
    * @return void
    */
   public function run() {
-    $data = [
+     $data = [
         [
-            'id' => '1',
-            'role' => 'Administrador',
+            'role_id' => '1',
+            'email' => 'admin@admin.es',
+            'password' => 'admin',
+            'activo' => 1,
             'created' => date('Y-m-d H:i:s'),
             'modified' => date('Y-m-d H:i:s'),
         ],
     ];
 
-    $table = $this->table('roles');
+    $table = $this->table('users');
     $table->insert($data)->save();
     
   }
